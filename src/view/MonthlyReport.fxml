@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="519.0" prefWidth="674.0" style="-fx-background-color: #9c88ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MonthlyReportController">
+   <children>
+      <Label layoutX="281.0" layoutY="3.0" prefHeight="35.0" prefWidth="203.0" text="Monthly report" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="2.0" onAction="#btnBackOnAction" text="&lt;back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView layoutX="47.0" layoutY="188.0" prefHeight="291.0" prefWidth="581.0">
+        <columns>
+          <TableColumn prefWidth="158.0" text="Weak" />
+          <TableColumn prefWidth="155.0" text="Income" />
+            <TableColumn prefWidth="152.0" text="Cost" />
+            <TableColumn prefWidth="115.0" text="Profit" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbSelectMonth" labelFloat="true" layoutX="47.0" layoutY="77.0" prefHeight="31.0" prefWidth="203.0" promptText="Select month" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="mealContext" prefHeight="519.0" prefWidth="674.0" style="-fx-background-color: #9c88ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealFormController">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#backOnAction" style="-fx-background-color: #4bcffa;" text="back">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="468.0" layoutY="193.0" onAction="#saveOnAction" style="-fx-background-color: #34e7e4;" text="Save">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="282.0" layoutY="7.0" text="Meal System" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMealPlane" labelFloat="true" layoutX="23.0" layoutY="86.0" prefHeight="31.0" prefWidth="153.0" promptText="meal plane" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtPrice" labelFloat="true" layoutX="286.0" layoutY="86.0" prefHeight="31.0" prefWidth="153.0" promptText="price" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="23.0" layoutY="151.0" prefHeight="31.0" prefWidth="346.0" promptText="description" style="-fx-background-color: white;" />
+      <TableView fx:id="tblMealDetails" layoutX="21.0" layoutY="242.0" prefHeight="261.0" prefWidth="642.0">
+        <columns>
+          <TableColumn fx:id="colmMealPlane" prefWidth="144.0" text="Meal plane" />
+          <TableColumn fx:id="colmPrice" prefWidth="116.0" text="Price" />
+            <TableColumn fx:id="colmDescription" prefWidth="266.0" text="Description" />
+            <TableColumn fx:id="colmDelete" prefWidth="115.0" text="Delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
